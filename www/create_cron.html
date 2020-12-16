@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link href="data:," rel="icon">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <style> html { font-family: Arial; display: inline-block; margin: 0px auto; }
+        h2 { font-size: 3.0rem; } p { font-size: 2.0rem; color: #00ff00; } .units { font-size: 1.2rem; }
+        .center { margin-left: auto; margin-right: auto; }
+    </style>
+</head>
+<body><h2><center>Herb Manager</center></h2>
+<hr>
+<center><h3><center>Create Timer</center></h3></center>
+<table class="center" width="100%" border="0" cellspacing="0" cellpadding="20">
+    <tr>
+        <td>
+            <center><u>Interval</u></center>
+            <form action="/cron" method="post">
+                <label for="tname1">NAME: </label>
+                <input id="tname1" name="tname" type="text" value="timer_name1"><br>
+                <label for="relaynum1">RELAYNUM: </label>
+                <select id="relaynum1" name="relaynum">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select><br>
+                <label for="relaystate1">RELAYSTATE: </label>
+                <select id="relaystate1" name="relaystate">
+                    <option value="ON">ON</option>
+                    <option value="OFF">OFF</option>
+                    <option value="FLIP">FLIP</option>
+                </select><br>
+                <label for="period1">PERIOD(sec): </label>
+                <input id="period1" name="period" type="text" value="60"><br>
+                <center><input name="createInterval" type="submit" value="Create"></center>
+            </form>
+        </td>
+        <td>
+            <center><u>Clock</u></center>
+            <form action="/cron" method="post">
+                <label for="tname2">NAME: </label>
+                <input id="tname2" name="tname" type="text" value="timer_name2"><br>
+                <label for="relaynum2">RELAYNUM: </label>
+                <select id="relaynum2" name="relaynum">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select><br>
+                <label for="relaystate2">RELAYSTATE: </label>
+                <select id="relaystate2" name="relaystate">
+                    <option value="ON">ON</option>
+                    <option value="OFF">OFF</option>
+                    <option value="FLIP">FLIP</option>
+                </select><br>
+                <label for="pointer2">TIME(24hr): </label>
+                <input id="pointer2" name="pointer" type="text" value="23:59"><br>
+                <center><input name="createClock" type="submit" value="Create"></center>
+            </form>
+        </td>
+    </tr>
+</table>
+<br><br>
+<table class="center" width="100%" border="0" cellspacing="0" cellpadding="20">
+    <tr>
+        <td>
+            <center><u>Temperature</u></center>
+            <form action="/cron" method="post">
+                <label for="tname3">NAME: </label>
+                <input id="tname3" name="tname" type="text" value="timer_name3"><br>
+                <label for="relaynum3">RELAYNUM: </label>
+                <select id="relaynum3" name="relaynum">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select><br>
+                <label for="relaystate3">RELAYSTATE: </label>
+                <select id="relaystate3" name="relaystate">
+                    <option value="ON">ON</option>
+                    <option value="OFF">OFF</option>
+                    <option value="FLIP">FLIP</option>
+                </select><br>
+                <label for="operator3">OPERATOR: </label>
+                <select id="operator3" name="operator">
+                    <option value=">">></option>
+                    <option value="<"><</option>
+                </select><br>
+                <label for="tvalue3">Temp: </label>
+                <input id="tvalue3" name="tvalue" type="text" value="65"><br>
+                <label for="period3">PERIOD(sec): </label>
+                <input id="period3" name="period" type="text" value="60"><br>
+                <center><input name="createTemp" type="submit" value="Create"></center>
+            </form>
+        </td>
+        <td>
+            <center><u>Humid</u></center>
+            <form action="/cron" method="post">
+                <label for="tname4">NAME: </label>
+                <input id="tname4" name="tname" type="text" value="timer_name4"><br>
+                <label for="relaynum4">RELAYNUM: </label>
+                <select id="relaynum4" name="relaynum">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select><br>
+                <label for="relaystate4">RELAYSTATE: </label>
+                <select id="relaystate4" name="relaystate">
+                    <option value="ON">ON</option>
+                    <option value="OFF">OFF</option>
+                    <option value="FLIP">FLIP</option>
+                </select><br>
+                <label for="operator4">OPERATOR: </label>
+                <select id="operator4" name="operator">
+                    <option value=">">></option>
+                    <option value="<"><</option>
+                </select><br>
+                <label for="tvalue4">HUMIDITY: </label>
+                <input id="tvalue4" name="tvalue" type="text" value="65"><br>
+                <label for="period4">PERIOD(sec): </label>
+                <input id="period4" name="period" type="text" value="60"><br>
+                <center><input name="createHumid" type="submit" value="Create"></center>
+            </form>
+        </td>
+    </tr>
+</table>
+<hr>
+<center><a href="/">Home</a></center>
+</body>
+</html>
